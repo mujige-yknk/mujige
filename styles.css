@@ -113,6 +113,10 @@ img {
 }
 
 .language-switch {
+  position: absolute;
+  top: 1.2rem;
+  right: max(calc((100vw - 1120px) / 2), 1rem);
+  z-index: 2;
   display: inline-flex;
   flex-shrink: 0;
   gap: 0.2rem;
@@ -758,6 +762,19 @@ h1 {
 }
 
 @media (max-width: 760px) {
+  .hero,
+  .page-header {
+    background-image: linear-gradient(180deg, #071226 0%, #0b1b32 100%);
+  }
+
+  .hero {
+    padding-bottom: 2rem;
+  }
+
+  .section {
+    padding: 2.75rem 0;
+  }
+
   h1 {
     font-size: 2rem;
   }
@@ -808,11 +825,42 @@ h1 {
 
   .nav {
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.35rem;
+    padding: 0.75rem 0;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .nav-links a {
+    padding-inline: 0.4rem;
+    white-space: nowrap;
+  }
+
+  .language-switch {
+    position: static;
+    display: flex;
+    width: max-content;
+    margin: 0.75rem 1rem 0 auto;
+    gap: 0.15rem;
+    padding: 0.2rem;
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(3, 8, 20, 0.82);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+  }
+
+  .language-button {
+    min-height: 44px;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.9rem;
   }
 
   .hero-content {
-    padding-top: 2rem;
+    padding-top: 1.25rem;
   }
 
   .story-copy {
